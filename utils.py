@@ -41,20 +41,15 @@ def interpret_shap(model, features, data_point):
 def get_llm_explanation(aqi_value, shap_dict):
     pos_str = ", ".join([f"{k} (+{v:.1f})" for k, v in shap_dict['positive'].items()]) or "none"
     neg_str = ", ".join([f"{k} ({v:.1f})" for k, v in shap_dict['negative'].items()]) or "none"
-
     category = "Good" if aqi_value <= 50 else \
                "Satisfactory" if aqi_value <= 100 else \
                "Moderate" if aqi_value <= 200 else \
                "Poor" if aqi_value <= 300 else \
                "Very Poor" if aqi_value <= 400 else "Severe"
-
     prompt = f"""Current AQI is {aqi_value:.0f} ({category} air quality).
 Main pollutants increasing AQI: {pos_str}
 Factors helping improve it: {neg_str}
-Write a short explanation in simple English
-give 1-2 points on heath impacts 
-give 1-2 points on  health tips in bullet points."""
-
+Write a short explanation in simple English. Give 1-2 points on health impacts. Give 1-2 points on health tips in bullet points."""
     with st.spinner("Getting smart explanation from Google Gemini..."):
         try:
             model = genai.GenerativeModel(GEMINI_MODEL)
