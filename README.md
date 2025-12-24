@@ -1,8 +1,8 @@
-# 🌫️ AeroPred AI: Air Quality Index Predictor
+# 🌫️ Airware: Smart Air Quality Prediction
 
 **A Multi-Layered, Explainable AI (XAI) and Generative AI Solution for AQI Forecasting.**
 
-AeroPred AI is a public health-focused machine learning project that predicts the Air Quality Index (AQI) and provides transparent, natural-language explanations for its predictions. It combines a high-performance XGBoost model with the SHAP (SHapley Additive exPlanations) framework and a Large Language Model (LLM) for actionable, user-friendly advisories.
+Airware is a public health-focused machine learning project that predicts the Air Quality Index (AQI) and provides transparent, natural-language explanations for its predictions. It combines a high-performance XGBoost model with the SHAP (SHapley Additive exPlanations) framework and a Large Language Model (LLM) for actionable, user-friendly advisories.
 
 ## ✨ Features
 
@@ -53,7 +53,7 @@ The project relies on publicly available air quality data for Indian cities.
 | :--- | :--- |
 | `app.py` | Main Streamlit application. Handles user input, model loading, prediction, and SHAP visualization. |
 | `model_trainer.py` | Script for data cleaning, feature engineering, XGBoost training, and saving the model artifact. |
-| `utils.py` | Utility functions, including LLM prompt construction, Gemini API communication, and LLM server management. |
+| `utils.py` | Utility functions, including LLM prompt construction, Gemini API generation, and inclusion. |
 | `requirements.txt` | List of Python dependencies (`streamlit`, `xgboost`, `shap`, etc.). |
 | `aqi_model.pkl` | Serialized trained XGBoost model and feature list (created by `model_trainer.py`). |
 | `city_day.csv` | The raw air quality dataset. |
