@@ -1,8 +1,8 @@
-# 🌫️ Airware: Smart Air Quality Prediction
+# 🌫️ Air Aware: Smart Air Quality Prediction
 
 **A Multi-Layered, Explainable AI (XAI) and Generative AI Solution for AQI Forecasting.**
 
-Airware is a public health-focused machine learning project that predicts the Air Quality Index (AQI) and provides transparent, natural-language explanations for its predictions. It combines a high-performance XGBoost model with the SHAP (SHapley Additive exPlanations) framework and a Large Language Model (LLM) for actionable, user-friendly advisories.
+Air Aware is a machine learning project that predicts the Air Quality Index (AQI) and provides transparent, natural-language explanations for its predictions. It combines a high-performance XGBoost model with the SHAP (SHapley Additive exPlanations) framework and a Large Language Model (LLM) for actionable, user-friendly advisories.
 
 ## ✨ Features
 
